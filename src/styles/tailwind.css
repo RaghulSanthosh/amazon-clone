@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #2563EB; /* Trust-building blue (blue-600) */
+  --color-primary-50: #EFF6FF; /* Light blue tint (blue-50) */
+  --color-primary-100: #DBEAFE; /* Lighter blue (blue-100) */
+  --color-primary-500: #3B82F6; /* Medium blue (blue-500) */
+  --color-primary-600: #2563EB; /* Primary blue (blue-600) */
+  --color-primary-700: #1D4ED8; /* Darker blue (blue-700) */
+  
+  /* Secondary Colors */
+  --color-secondary: #64748B; /* Professional slate gray (slate-500) */
+  --color-secondary-100: #F1F5F9; /* Light slate (slate-100) */
+  --color-secondary-200: #E2E8F0; /* Lighter slate (slate-200) */
+  --color-secondary-300: #CBD5E1; /* Light slate (slate-300) */
+  --color-secondary-400: #94A3B8; /* Medium light slate (slate-400) */
+  --color-secondary-500: #64748B; /* Medium slate (slate-500) */
+  --color-secondary-600: #475569; /* Darker slate (slate-600) */
+  --color-secondary-700: #334155; /* Dark slate (slate-700) */
+  
+  /* Accent Colors */
+  --color-accent: #F59E0B; /* Warm amber (amber-500) */
+  --color-accent-50: #FFFBEB; /* Light amber tint (amber-50) */
+  --color-accent-100: #FEF3C7; /* Lighter amber (amber-100) */
+  --color-accent-400: #FBBF24; /* Medium light amber (amber-400) */
+  --color-accent-500: #F59E0B; /* Primary amber (amber-500) */
+  --color-accent-600: #D97706; /* Darker amber (amber-600) */
+  
+  /* Background Colors */
+  --color-background: #FAFAFA; /* Soft off-white (gray-50) */
+  --color-surface: #FFFFFF; /* Pure white (white) */
+  
+  /* Text Colors */
+  --color-text-primary: #1E293B; /* Deep charcoal (slate-800) */
+  --color-text-secondary: #64748B; /* Medium gray (slate-500) */
+  --color-text-muted: #94A3B8; /* Light gray (slate-400) */
+  
+  /* Status Colors */
+  --color-success: #10B981; /* Fresh green (emerald-500) */
+  --color-success-50: #ECFDF5; /* Light green tint (emerald-50) */
+  --color-success-100: #D1FAE5; /* Lighter green (emerald-100) */
+  --color-success-500: #10B981; /* Primary green (emerald-500) */
+  --color-success-600: #059669; /* Darker green (emerald-600) */
+  
+  --color-warning: #F59E0B; /* Consistent amber (amber-500) */
+  --color-warning-50: #FFFBEB; /* Light amber tint (amber-50) */
+  --color-warning-100: #FEF3C7; /* Lighter amber (amber-100) */
+  --color-warning-500: #F59E0B; /* Primary amber (amber-500) */
+  --color-warning-600: #D97706; /* Darker amber (amber-600) */
+  
+  --color-error: #EF4444; /* Clear red (red-500) */
+  --color-error-50: #FEF2F2; /* Light red tint (red-50) */
+  --color-error-100: #FEE2E2; /* Lighter red (red-100) */
+  --color-error-500: #EF4444; /* Primary red (red-500) */
+  --color-error-600: #DC2626; /* Darker red (red-600) */
+  
+  /* Border Colors */
+  --color-border: #E2E8F0; /* Minimal border (slate-200) */
+  --color-border-light: #F1F5F9; /* Light border (slate-100) */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .font-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .shadow-product-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-modal {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .transition-smooth {
+    transition: all 200ms ease-out;
+  }
+  
+  .transition-layout {
+    transition: all 300ms ease-in-out;
+  }
+  
+  .transition-spring {
+    transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .hover-lift {
+    transition: transform 150ms ease-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+}
